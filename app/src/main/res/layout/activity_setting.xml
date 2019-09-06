@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+
+    <TextView
+        style="@style/tv_setting_show"
+        android:text="设备连接设置:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_port_show"
+            android:text="定位设备 : " />
+
+        <TextView
+            android:id="@+id/tv_in_status"
+            style="@style/tv_port_show"
+            android:layout_marginLeft="10dp"
+            android:text="连接断开" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_port_show"
+            android:text="基准设备 : " />
+
+        <TextView
+            android:id="@+id/tv_out_status"
+            style="@style/tv_port_show"
+            android:layout_marginLeft="10dp"
+            android:text="连接断开" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/tv_setting_show"
+            android:text="版本号:" />
+
+        <TextView
+            android:id="@+id/version_name"
+            style="@style/tv_setting_show"
+            android:layout_centerHorizontal="true"
+            android:text="1.0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/tv_setting_show"
+            android:text="设备号:" />
+
+        <TextView
+            android:id="@+id/devices_id"
+            style="@style/tv_setting_show"
+            android:layout_centerHorizontal="true"
+            android:text="12345678" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/tv_setting_show"
+            android:id="@+id/tv_phone"
+            android:text="联系电话:" />
+
+        <TextView
+            style="@style/tv_setting_show"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:text="2602089073" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_setting_show"
+            android:text="Copyright © 2015 北京汇迪森科技有限公司 版权所有"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/data"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:textColor="@color/white" />-->
+    <!--</ScrollView>-->
+
+</LinearLayout>

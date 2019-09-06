@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:focusable="false"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/tv_24px_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="员工号" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:gravity="center">
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/et_job_number"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:completionThreshold="1"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_corner_login"
+                android:numeric="integer"
+                android:dropDownHorizontalOffset="10dp"
+                android:dropDownVerticalOffset="2dp"
+                android:dropDownWidth="100dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/check_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="45dp"
+        android:descendantFocusability="blocksDescendants"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"></ListView>
+
+    <Button
+        android:id="@+id/upload"
+        style="@style/button_style"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="上报" />
+
+</RelativeLayout>

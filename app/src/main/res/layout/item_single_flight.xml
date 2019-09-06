@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_flight_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        style="@style/Flight"
+        android:id="@+id/tv_incoming_number"
+        tools:text="ZH9153"
+        />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        style="@style/Flight"
+        android:id="@+id/tv_departure_number"
+        tools:text="ZH9153"
+        />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        style="@style/Flight"
+        android:id="@+id/tv_flight_planed_arrival"
+        tools:text="1235"
+        />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        style="@style/Flight"
+        android:id="@+id/tv_flight_planed_fly"
+        tools:text="1235"
+        />
+
+    <TextView
+        style="@style/Flight"
+        android:id="@+id/tv_flight_dynamic_column"
+        tools:text="42"
+        />
+
+</LinearLayout >

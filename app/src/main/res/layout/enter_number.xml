@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0px"-->
+    <!--android:layout_height="0px"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"></LinearLayout>-->
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:completionThreshold="1"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/search_arrow"
+        android:dropDownHeight="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="5dp"
+        android:hint="请输入工号"
+        android:numeric="integer"
+        android:textSize="24sp"
+        android:background="@drawable/selector_corner_login"
+        android:dropDownWidth="230dp"
+        android:dropDownHorizontalOffset="10dp"
+        android:dropDownVerticalOffset="2dp"
+        android:textColor="@color/black">
+
+    </MultiAutoCompleteTextView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_marginTop="30dp"
+        style="@style/button_style"
+        android:text="确定" />
+</LinearLayout>

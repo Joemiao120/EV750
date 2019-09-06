@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="标题：操作说明\n主页面" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/main" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="1、任务：
+任务分航班任务和非航班任务，航班任务是保障飞行器及旅客的任务，由调度员派发；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/task" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="非航班任务是保障机场基础业务的任务，由用户在主页面点击申请任务自己申请；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/task_nofilght" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按ok键点击任务，进入接受页面：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/task_info" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按ok键点击接受按钮，进入输入工号页面：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/input_name" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="工号就是外场证上面的编号，如“A001”就输入“1001”，“B001”就输入“2001”临时工号没有数字就输入员工号数字即可，即“A”用数字“1”代替，“B”用数字“2”代替；输入之后点击OK键确定，任务状态就会变成“人车绑定”，进入任务节点页面：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/task_node" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按ok键上报任务节点\n在最后一个任务处按向下键，刷新按钮变为蓝色，按ok键可以刷新任务：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/refresh_task" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="2、航班信息：\n航班信息分为五类：前方未起飞、到达本站、本站起飞、已经起飞（本站）、远机位航班；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/flight_info" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按菜单键弹出航班排序和航班搜索：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/select_action" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按ok键选择航班排序，选中每一类航班按ok键，该类航班就会靠前显示，最关注哪一类航班，可以将该类航班移动到第一行；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/flight_sort" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="按ok键选择航班搜索，可以选择航班号、机位等，输入想要搜索的内容（按#可以切换输入法），按ok键点击搜索按钮即可查到符合搜索内容的航班；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="选择要搜索的字段，若没有想要搜索的字段选择全部，可以全文检索，然后在下方输入框中输入要搜索的内容，按ok键点击搜索按钮，搜索结果展示：" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search_all" />
+
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="3、车辆检查：\n输入员工号、选择出车入库、燃油等项正常异常；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/check_car" />
+
+            <TextView
+                style="@style/tv_explain_show"
+                android:text="4、设置：\n可以查看定位模块的连接状态以及软件的版本号；" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/setting" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

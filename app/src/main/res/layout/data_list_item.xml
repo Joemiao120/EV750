@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_color_bg">
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        android:id="@+id/arrive_name"
+        style="@style/task_item_show"
+        android:text="进港" />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        android:id="@+id/plane_type"
+        style="@style/task_item_show"
+        android:text="机型" />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        android:id="@+id/land_time"
+        style="@style/task_item_show"
+        android:text="落地时间" />
+
+    <com.huidisen.ep750.view.MarqueeTextView
+        android:id="@+id/task_type"
+        style="@style/task_item_show"
+        android:text="类型" />
+
+    <TextView
+        android:id="@+id/task_status"
+        style="@style/task_item_show"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="状态" />
+
+</LinearLayout>

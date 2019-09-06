@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <taskDefList>
+    <taskDef name="摆渡" type="baidu" groupName="摆渡" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="摆渡车到位" code="dw" auto="true" fence="out@yuanjiwei" fenceType="in"/>
+        <taskNode name="上客" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="下客" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="全顺" type="quanshun" groupName="全顺" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="全顺车到位" code="dw" auto="true" fence="out@yuanjiwei" fenceType="in"/>
+        <taskNode name="上客" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="下客" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="残疾人保障" type="canjirenbaozhang" groupName="残疾人保障" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="残疾人保障车到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="上客" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="下客" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="搭客梯" type="daketi" groupName="客梯" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+      	<taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="客梯车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="客梯车靠接完成" code="kjwc" auto="false" fence="" fenceType=""/>
+        <taskNode name="客舱门开启" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="撤客梯" type="cheketi" groupName="客梯" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+      	<taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="客舱门关闭" code="cmgb" auto="false" fence="" fenceType=""/>
+        <taskNode name="客梯车撤离" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="引导" type="yindao" groupName="引导" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+       	<taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="引导车到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="引导开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="引导完成" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="牵引" type="qianyin" groupName="牵引" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+      	<taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="牵引车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="牵引车对接完成" code="djwc" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器推出开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器推出完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="电源" type="dianyuan" groupName="电源" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="电源车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="航空器充电开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器充电完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="气源" type="qiyuan" groupName="气源" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="气源车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="航空器充气开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器充气完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="空调" type="kongtiao" groupName="空调" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="空调车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="空调开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="空调完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="清水" type="qingshui" groupName="清水" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="清水车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="输送清水开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="输送清水完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="污水" type="wushui" groupName="污水" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="污水车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="倾倒污水开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="倾倒污水完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="垃圾" type="laji" groupName="垃圾" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="垃圾车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="倾倒垃圾开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="倾倒垃圾完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="除冰" type="chubing" groupName="除冰" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="除冰车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="除冰开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="除冰完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="进港地勤" type="diqin_in" groupName="地勤" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="接受" code="js" auto="false" fence="" fenceType=""/>
+        <taskNode name="人员到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器入位" code="rw" auto="false" fence="" fenceType=""/>
+        <taskNode name="挡轮挡完成" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="出港地勤" type="diqin_out" groupName="地勤" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="接受" code="js" auto="false" fence="" fenceType=""/>
+        <taskNode name="人员到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="撤轮档完成" code="cldwc" auto="false" fence="" fenceType=""/>
+        <taskNode name="航空器驶离机坪" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="进港登机桥" type="dengjiqiao_in" groupName="登机桥" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="接受" code="js" auto="false" fence="" fenceType=""/>
+        <taskNode name="人员到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="廊桥对接完成" code="djwc" auto="false" fence="" fenceType=""/>
+        <taskNode name="客舱门开启" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="出港登机桥" type="dengjiqiao_out" groupName="登机桥" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="接受" code="js" auto="false" fence="" fenceType=""/>
+        <taskNode name="人员到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="客舱门关闭" code="kcmgb" auto="false" fence="" fenceType=""/>
+        <taskNode name="廊桥撤离" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="行李牵引" type="xingliqianyin" groupName="行李牵引" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="行李牵引车到位" code="dw" auto="true" fence="in@jiwei" fenceType="in"/>
+        <taskNode name="行李牵引开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="行李牵引完成" code="wc" auto="true" fence="out@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="传送带" type="chuansongdai" groupName="传送带" isFlightTask="true" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="司机接受" code="sjjs" auto="false" fence="" fenceType=""/>
+        <taskNode name="人车绑定" code="rcbd" auto="false" fence="" fenceType=""/>
+        <taskNode name="传送带车到位" code="dw" auto="true" fence="all@jiwei" fenceType="in"/>
+        <taskNode name="传送行李/货物开始" code="ks" auto="false" fence="" fenceType=""/>
+        <taskNode name="传送行李/货物完成" code="wc" auto="true" fence="all@jiwei" fenceType="out"/>
+      </nodeList>
+    </taskDef>
+    <taskDef name="装卸队" type="zhuangxiedui" groupName="装卸队" isFlightTask="true" hasRcbd="false">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" fence="" fenceType=""/>
+        <taskNode name="接受" code="js" auto="false" fence="" fenceType=""/>
+        <taskNode name="到位" code="dw" auto="false" fence="" fenceType=""/>
+        <taskNode name="货舱门开启" code="hcmkq" auto="false" fence="" fenceType=""/>
+        <taskNode name="装/卸货完成" code="zxhwc" auto="false" fence="" fenceType=""/>
+        <taskNode name="货舱门关闭" code="wc" auto="false" fence="" fenceType=""/>
+      </nodeList>
+    </taskDef>
+    
+    <taskDef name="巡道" type="xundao" groupName="巡道" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="巡道开始" code="ks" auto="false" />
+        <taskNode name="巡道完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="驱鸟" type="quniao" groupName="驱鸟" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="驱鸟开始" code="ks" auto="false" />
+        <taskNode name="驱鸟完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="摩擦系数测试" type="mocaceshi" groupName="摩擦系数测试" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="摩擦系数测试开始" code="ks" auto="false" />
+        <taskNode name="摩擦系数测试完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="施工监管" type="shigongjianguan" groupName="施工监管" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="施工监管开始" code="ks" auto="false" />
+        <taskNode name="施工监管完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+     <taskDef name="维修抢修" type="weixiuqiangxiu" groupName="维修抢修" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="维修抢修开始" code="ks" auto="false" />
+        <taskNode name="维修抢修完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="机坪清扫" type="jipingqingsao" groupName="机坪清扫" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="机坪清扫开始" code="ks" auto="false" />
+        <taskNode name="机坪清扫完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="跑道清扫" type="paodaoqingsao" groupName="跑道清扫" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="跑道清扫开始" code="ks" auto="false" />
+        <taskNode name="跑道清扫完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="设备维修" type="shebeiweixiu" groupName="设备维修" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="设备维修开始" code="ks" auto="false" />
+        <taskNode name="设备维修完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="冬季除雪" type="dongjichuxue" groupName="冬季除雪" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="冬季除雪开始" code="ks" auto="false" />
+        <taskNode name="冬季除雪完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="残损航空器搬移应急救援" type="yingjijiuyuan" groupName="残损航空器搬移应急救援" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="残损航空器搬移应急救援开始" code="ks" auto="false" />
+        <taskNode name="残损航空器搬移应急救援完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+
+	<taskDef name="草地洒药" type="caodisayao" groupName="草地洒药" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="草地洒药开始" code="ks" auto="false" />
+        <taskNode name="草地洒药完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="草地维护" type="caodiweihu" groupName="草地维护" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="草地维护开始" code="ks" auto="false" />
+        <taskNode name="草地维护完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="不停航施工巡视" type="butinghangshigong" groupName="不停航施工巡视" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="不停航施工巡视开始" code="ks" auto="false" />
+        <taskNode name="不停航施工巡视完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="净空巡视" type="jingkongxunshi" groupName="净空巡视" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="净空巡视开始" code="ks" auto="false" />
+        <taskNode name="净空巡视完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="灯光巡视" type="dengguangxunshi" groupName="灯光巡视" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="灯光巡视开始" code="ks" auto="false" />
+        <taskNode name="灯光巡视完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="灯光维修" type="dengguangweixiu" groupName="灯光维修" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="灯光维修开始" code="ks" auto="false" />
+        <taskNode name="灯光维修完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="导航设备维修" type="daohangshebeiweixiu" groupName="导航设备维修" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="导航设备维修开始" code="ks" auto="false" />
+        <taskNode name="导航设备维修完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="导航设备巡视" type="daohangshebeixunshi" groupName="导航设备巡视" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="导航设备巡视开始" code="ks" auto="false" />
+        <taskNode name="导航设备巡视完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+	<taskDef name="综合公务" type="zonghegongwu" groupName="综合公务" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="综合公务开始" code="ks" auto="false" />
+        <taskNode name="综合公务完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="控制区巡逻" type="kongzhiquxunluo" groupName="控制区巡逻" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="控制区巡逻开始" code="ks" auto="false" />
+        <taskNode name="控制区巡逻完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="消防执勤" type="xiaofangzhiqin" groupName="消防执勤" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="消防执勤开始" code="ks" auto="false" />
+        <taskNode name="消防执勤完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+    <taskDef name="巡逻" type="xunluo" groupName="巡逻" isFlightTask="false" hasRcbd="true">
+      <nodeList>
+        <taskNode name="待接受" code="djs" auto="false" />
+        <taskNode name="司机接受" code="sjjs" auto="false" />
+        <taskNode name="人车绑定" code="rcbd" auto="false"/>
+        <taskNode name="巡逻开始" code="ks" auto="false" />
+        <taskNode name="巡逻完成" code="wc" auto="false" />
+      </nodeList>
+    </taskDef>
+  </taskDefList>
+</root>

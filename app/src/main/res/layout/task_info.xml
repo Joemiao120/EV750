@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewStub
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/title_layout" />
+
+    <ViewStub
+        android:id="@+id/title_layout_noFlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/title_layout_noflight" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="33dp"
+        android:text="暂无任务"
+        android:textColor="@color/node_gray"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="33dp">
+
+        <ListView
+            android:id="@+id/date_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="53dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"></ListView>
+
+        <Button
+            android:id="@+id/reflesh"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_selected_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="刷新任务" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

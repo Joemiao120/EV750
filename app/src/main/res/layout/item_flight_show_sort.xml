@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <TextView
+        android:id="@+id/tv_flight_sort_item"
+        android:layout_width="200dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="13dp"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        tools:text="前方起飞"
+        />
+
+    </RelativeLayout>

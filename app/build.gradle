@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.huidisn.ev750"
+        minSdkVersion 10
+        targetSdkVersion 10
+        versionCode 2016073121
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("750key.store.jks")
+            storePassword "huidisen888"
+            keyAlias "750key"
+            keyPassword "huidisen888"
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            signingConfig signingConfigs.releaseConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:25.3.0'
+
+    // for use recyclerview
+    implementation 'com.android.support:recyclerview-v7:25.3.0'
+    implementation files('src/main/libs/ormlite-android-4.48.jar')
+    implementation files('src/main/libs/ormlite-core-4.48.jar')
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.squareup.okhttp3:okhttp-ws:3.3.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    // for use butterknife
+    implementation 'com.jakewharton:butterknife:8.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+
+    // for use logger
+    implementation 'com.github.orhanobut:logger:1.12'
+
+    // for use base adapter
+    implementation 'com.zhy:base-rvadapter:3.0.2'
+
+    // for use eventbus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    implementation 'com.weiwangcn.betterspinner:library:1.1.0'
+
+    // for use loading dialog
+    implementation 'com.kaopiz:kprogresshud:1.0.2'
+
+    // for use sectioned recyclerview
+    implementation 'com.truizlop.sectionedrecyclerview:library:1.2.0'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.mani:ThinDownloadManager:1.2.5'
+}
